@@ -6,3 +6,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #7fffd4;
+}
+
+main {
+    flex-grow: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+
+.toolbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.brand {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.toolbar .brand img{
+    width: 50px;
+    margin-right: 20px;
+}
+
+#choose {
+    padding-right: 80px;
+}
+
+.play {
+    padding: 0 20px;
+}
+
+/* GRID */
+
+.grid {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
