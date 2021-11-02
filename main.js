@@ -11,7 +11,7 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 const playBtn = document.querySelector('.play')
 const grid = document.querySelector('.grid')
 
-playBtn.addEventListener('click', function() {
+playBtn.addEventListener('click', () => {
 
     const userChoice = document.getElementById('choose').value;
     grid.innerHTML = '';
@@ -49,9 +49,7 @@ playBtn.addEventListener('click', function() {
 
         grid.append(square);
 
-        square.addEventListener('click', function() {
-            square.classList.add('active');
-        })
+        square.addEventListener('click', () => square.classList.add('active'))
     }
 
 })
