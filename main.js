@@ -8,25 +8,25 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 */
 
-const userChoice = document.getElementById('choose').value;
 const playBtn = document.querySelector('.play')
 const grid = document.querySelector('.grid')
 
 playBtn.addEventListener('click', function() {
-    
+
+    const userChoice = document.getElementById('choose').value;
     grid.innerHTML = '';
     console.log(grid);
     let cells = 0;
 
     switch (userChoice) {
         case 'easy' :
-            cells = 49;
+            cells = 100;
             break;
         case 'medium' :
             cells = 81;
             break;
         case 'hard' :
-            cells = 100;
+            cells = 49;
     }
 
 
@@ -34,18 +34,18 @@ playBtn.addEventListener('click', function() {
         const square = genSquare();
         switch (cells) {
             case 100 :
-                square.classList.add('hard');
+                square.classList.add('easy');
                 break;
             case 81 :
                 square.classList.add('medium');
                 break;
             case 49 :
-                square.classList.add('easy');
+                square.classList.add('hard');
         }
 
         let span = document.createElement('span');
-        span.append(i)
-        square.append(span)
+        span.append(i);
+        square.append(span);
 
         grid.append(square);
     }
