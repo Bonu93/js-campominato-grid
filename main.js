@@ -8,4 +8,86 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 */
 
-console.log('js OK');
+const userChoice = document.getElementById('choose').value;
+const playBtn = document.querySelector('.play')
+const grid = document.querySelector('.grid')
+
+playBtn.addEventListener('click', function() {
+    
+    grid.innerHTML = '';
+    console.log(grid);
+    let cells = 0;
+
+    switch (userChoice) {
+        case 'easy' :
+            cells = 49;
+            break;
+        case 'medium' :
+            cells = 81;
+            break;
+        case 'hard' :
+            cells = 100;
+    }
+
+
+    for (let i = 1; i <= cells; i++) {
+        const square = genSquare();
+        switch (cells) {
+            case 100 :
+                square.classList.add('hard');
+                break;
+            case 81 :
+                square.classList.add('medium');
+                break;
+            case 49 :
+                square.classList.add('easy');
+        }
+
+        let span = document.createElement('span');
+        span.append(i)
+        square.append(span)
+
+        grid.append(square);
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FUNCTIONS */
+
+function genSquare () {
+    const node = document.createElement('div');
+    node.classList.add('square');
+    return node;
+}

@@ -10,7 +10,6 @@
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100vh;
     background-color: #7fffd4;
 }
@@ -35,7 +34,7 @@ main {
 
 .brand {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -59,5 +58,28 @@ main {
     height: 500px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.square.hard {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.square.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.square.easy {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
