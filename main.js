@@ -48,7 +48,12 @@ playBtn.addEventListener('click', function() {
         square.append(span);
 
         grid.append(square);
+        
+        square.addEventListener('click', function() {
+            square.classList.add('active');
+        })
     }
+
 })
 
 
